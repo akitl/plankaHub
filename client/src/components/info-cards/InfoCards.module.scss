@@ -1,0 +1,77 @@
+.wrapper {
+  padding: 1rem;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  min-width: 250px;
+}
+
+.filterDropdown {
+  min-width: 150px;
+}
+
+.cardsGrid {
+  margin-top: 1rem !important;
+}
+
+.infoCard {
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.importanceBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.importanceBadge.green {
+  background-color: #21ba45;
+}
+
+.importanceBadge.yellow {
+  background-color: #fbbd08;
+}
+
+.importanceBadge.red {
+  background-color: #db2828;
+}
+
+.cardContent {
+  margin-top: 0.5rem;
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.assignee {
+  color: #767676;
+  font-size: 0.9rem;
+}

@@ -22,5 +22,9 @@ export default function* coreWatchers() {
     takeEvery(EntryActionTypes.LOGOUT, ({ payload: { revokeAccessToken } }) =>
       services.logout(revokeAccessToken),
     ),
+    takeEvery(EntryActionTypes.GO_TO, ({ payload: { pathname } }) => services.goTo(pathname)),
+    takeEvery(EntryActionTypes.GO_TO_PROJECT, ({ payload: { projectId } }) =>
+      services.goToProject(projectId),
+    ),
   ]);
 }

@@ -41,6 +41,49 @@ export const selectPath = createReduxOrmSelector(
 
           return {
             projectId: projectModel.id,
+            projectView: 'kanban',
+          };
+        }
+        case Paths.PROJECTS_GRID: {
+          const projectModel = Project.withId(pathsMatch.params.id);
+
+          if (!projectModel || !projectModel.isAvailableForUser(currentUserModel)) {
+            return {
+              projectId: null,
+            };
+          }
+
+          return {
+            projectId: projectModel.id,
+            projectView: 'grid',
+          };
+        }
+        case Paths.PROJECTS_DEBATES: {
+          const projectModel = Project.withId(pathsMatch.params.id);
+
+          if (!projectModel || !projectModel.isAvailableForUser(currentUserModel)) {
+            return {
+              projectId: null,
+            };
+          }
+
+          return {
+            projectId: projectModel.id,
+            projectView: 'debates',
+          };
+        }
+        case Paths.PROJECTS_MEETINGS: {
+          const projectModel = Project.withId(pathsMatch.params.id);
+
+          if (!projectModel || !projectModel.isAvailableForUser(currentUserModel)) {
+            return {
+              projectId: null,
+            };
+          }
+
+          return {
+            projectId: projectModel.id,
+            projectView: 'meetings',
           };
         }
         case Paths.BOARDS: {
