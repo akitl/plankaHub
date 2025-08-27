@@ -33,9 +33,25 @@ const logout = (revokeAccessToken = true) => ({
   },
 });
 
+const goTo = (pathname) => ({
+  type: EntryActionTypes.GO_TO,
+  payload: {
+    pathname,
+  },
+});
+
+const goToProject = (projectId) => ({
+  type: EntryActionTypes.GO_TO_PROJECT,
+  payload: {
+    projectId,
+  },
+});
+
 export default {
   toggleFavorites,
   toggleEditMode,
   updateHomeView,
   logout,
+  goTo,
+  goToProject,
 };

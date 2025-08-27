@@ -31,6 +31,8 @@ import comments from './comments';
 import activities from './activities';
 import notifications from './notifications';
 import notificationServices from './notification-services';
+import infoCards from './info-cards';
+import debates from './debates';
 
 export { http, socket };
 
@@ -61,4 +63,6 @@ export default {
   ...activities,
   ...notifications,
   ...notificationServices,
+  ...infoCards,
+  ...debates,
 };

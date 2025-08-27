@@ -47,6 +47,13 @@ export const ProjectBackgroundTypes = {
   IMAGE: 'image',
 };
 
+export const ProjectViews = {
+  KANBAN: 'kanban',
+  GRID: 'grid',
+  DEBATES: 'debates',
+  MEETINGS: 'meetings',
+};
+
 export const BoardViews = {
   KANBAN: 'kanban',
   GRID: 'grid',
